@@ -33,8 +33,8 @@ public class PesanBusService {
 
 	public void updateByCode(String code, Pesanan pesanan) {
 		// TODO Auto-generated method stub
-		Pesanan pesan = pesanBusDao.getPesanByCode(code);
-		pesan.setStatusConfirm(pesanan.getStatusConfirm());
+		//Pesanan pesan = pesanBusDao.getPesanByCode(code);
+		//pesan.setStatusConfirm(pesanan.getStatusConfirm());
 		//pesanBusDao.update(pesanan);
 	}
 
