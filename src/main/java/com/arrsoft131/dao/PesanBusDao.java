@@ -10,4 +10,6 @@ public interface PesanBusDao {
 
 	List<Pesanan> getPesanByPage(int page, int pageSize);
 
+	void save(Pesanan pesanan);
+
 }

@@ -40,4 +40,11 @@ public class PesanBusDaoImpl implements PesanBusDao {
 			return list;
 	}
 
+	public void save(Pesanan pesanan) {
+		// TODO Auto-generated method stub
+		Session session = sessionFactory.getCurrentSession();
+		session.save(pesanan);
+		session.flush();
+	}
+
 }

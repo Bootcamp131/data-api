@@ -26,5 +26,10 @@ public class PesanBusService {
 		return pesanBusDao.getPesanByPage(page, pageSize);
 	}
 
+	public void save(Pesanan pesanan) {
+		// TODO Auto-generated method stub
+		pesanBusDao.save(pesanan);
+	}
+
 	
 }
