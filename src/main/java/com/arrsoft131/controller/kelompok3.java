@@ -51,5 +51,10 @@ public class kelompok3 {
 		pesanBusService.save(pesanan);
 	}
 	
+	@RequestMapping(value="/example", method=RequestMethod.POST)
+	@ResponseStatus(HttpStatus.CREATED)
+	public Pesanan example(@RequestBody Pesanan pesanan){
+		return pesanan;
+	}
 	
 }
