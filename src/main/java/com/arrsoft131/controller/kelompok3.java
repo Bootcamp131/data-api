@@ -39,6 +39,7 @@ public class kelompok3 {
 	}
 	
 	@RequestMapping("/get/{code}")
+	@ResponseBody
 	public Pesanan getPesananByCode(@PathVariable String code){
 		Pesanan pesanan = pesanBusService.getPesanByCode(code);
 		return pesanan;
