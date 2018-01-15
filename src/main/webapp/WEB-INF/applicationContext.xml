@@ -22,9 +22,9 @@
 	 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 	    <property name="driverClassName" value="org.postgresql.Driver" />
-	    <property name="url" value="jdbc:postgresql://ec2-54-235-148-19.compute-1.amazonaws.com:5432/d8rdv1hh7elb43" />
-	    <property name="username" value="zctmrbiwtfiuhc"/>
-	    <property name="password" value="5cad2298b3e4a05c94786e9b812a704e457198810eaf33f57d18cc71dee7a360"/>
+	    <property name="url" value="jdbc:postgresql://ec2-54-221-251-195.compute-1.amazonaws.com:5432/d2tooeibpo71nj" />
+	    <property name="username" value="sofasouvvzefel"/>
+	    <property name="password" value="aa237fd912f5da4681abf30fd98afafe1e8798cd17b0735637c2590f9822348b"/>
 	</bean>
 	
 	<bean  class="org.springframework.orm.hibernate5.LocalSessionFactoryBean" 
