@@ -50,5 +50,9 @@ public class kelompok3 {
 		pesanBusService.save(pesanan);
 	}
 	
-	
+	@RequestMapping(value="/updcode/{code}", method=RequestMethod.PUT)
+	@ResponseStatus(HttpStatus.OK)
+	public void updatePesanan(@RequestBody Pesanan pesanan, @PathVariable String code){
+		pesanBusService.updateByCode(code, pesanan);
+	}
 }

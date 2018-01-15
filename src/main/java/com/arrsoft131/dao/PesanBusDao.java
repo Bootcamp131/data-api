@@ -12,4 +12,6 @@ public interface PesanBusDao {
 
 	void save(Pesanan pesanan);
 
+	void update(Pesanan pesanan);
+
 }
