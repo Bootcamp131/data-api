@@ -18,7 +18,7 @@ public class PesanBusDaoImpl implements PesanBusDao {
 	public Pesanan getPesanByCode(String code) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
-		String hql = "from Pesanan pesan where pesan.codePesan =: code";
+		String hql = "from Pesanan pesan where pesan.codePesan = :code";
 		Query query = session.createQuery(hql).setParameter("code", code);
 		List<Pesanan> listPesanan = query.list();
 		if(listPesanan.isEmpty())
