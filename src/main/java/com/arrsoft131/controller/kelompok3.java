@@ -34,7 +34,6 @@ public class kelompok3 {
 	public List<Pesanan> getPesanan(@RequestParam(value="page", defaultValue="0" ) int page){
 		int pageSize = 10; //perPage
 		List<Pesanan> listPesanan = pesanBusService.getPesanByPage(page, pageSize);
-		
 		return listPesanan;
 	}
 	
@@ -42,9 +41,6 @@ public class kelompok3 {
 	@ResponseBody
 	public Pesanan getPesananByCode(@PathVariable String code){
 		Pesanan pesanan = pesanBusService.getPesanByCode(code);
-		if(pesanan == null){
-			return new Pesanan();
-		}
 		return pesanan;
 	}
 	
@@ -54,9 +50,5 @@ public class kelompok3 {
 		pesanBusService.save(pesanan);
 	}
 	
-	@RequestMapping(value="/example", method=RequestMethod.POST)
-	public Pesanan example(@RequestBody Pesanan pesanan){
-		return pesanan;
-	}
 	
 }
