@@ -44,7 +44,7 @@ public class PesanBusDaoImpl implements PesanBusDao {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
 		session.saveOrUpdate(pesanan);
-		session.flush();
+		session.flush(); 
 	}
 
 }
