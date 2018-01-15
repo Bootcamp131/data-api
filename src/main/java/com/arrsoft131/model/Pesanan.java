@@ -27,6 +27,15 @@ public class Pesanan {
 	public int getId() {
 		return id;
 	}
+	
+	public String getCodePesan() {
+		return codePesan;
+	}
+
+	public void setCodePesan(String codePesan) {
+		this.codePesan = codePesan;
+	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
