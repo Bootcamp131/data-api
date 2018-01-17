@@ -65,7 +65,7 @@ public class kelompok3 {
 	
 	@RequestMapping(value="/get-pka/{kb}/{it}", method=RequestMethod.GET)
 	@ResponseBody
-	public List<Pesanan> getDataPesananByKeberangkatanAndIdTrayek(@PathVariable String kb, @PathVariable String it){
+	public List<Pesanan> getDataPesananByKeberangkatanAndIdTrayek(@PathVariable String kb, @PathVariable int it){
 		List<Pesanan> listPesanan = pesanBusService.getDataPesananByKeberangkatanAndIdTrayek(kb, it);
 		return listPesanan;
 	}

@@ -43,7 +43,7 @@ public class PesanBusService {
 		return pesanBusDao.getDataPesananByIdPemesan(pemesan);
 	}
 
-	public List<Pesanan> getDataPesananByKeberangkatanAndIdTrayek(String kb, String it) {
+	public List<Pesanan> getDataPesananByKeberangkatanAndIdTrayek(String kb, int it) {
 		// TODO Auto-generated method stub
 		return pesanBusDao.getDataPesananByKeberangkatanAndIdTrayek(kb, it);
 	}
