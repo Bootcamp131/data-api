@@ -66,4 +66,16 @@ public class PesanBusDaoImpl implements PesanBusDao {
 		return listPesanan;
 	}
 
+	public List<Pesanan> getDataPesananByKeberangkatanAndIdTrayek(String kb, String it) {
+		// TODO Auto-generated method stub
+		Session session = sessionFactory.getCurrentSession();
+		String hql = "from Pesanan pesan where pesan.idTrayek = :it and pesan.tanggalKeberangkatan = :kb";
+		Query query = session.createQuery(hql).setParameter("kb", kb).setParameter("it", it);
+		List<Pesanan> listPesanan = query.list();
+		if(listPesanan.isEmpty()){
+			return null;
+		}
+		return listPesanan;
+	}
+
 }

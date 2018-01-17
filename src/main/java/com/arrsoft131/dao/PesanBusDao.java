@@ -16,4 +16,6 @@ public interface PesanBusDao {
 
 	List<Pesanan> getDataPesananByIdPemesan(int pemesan);
 
+	List<Pesanan> getDataPesananByKeberangkatanAndIdTrayek(String kb, String it);
+
 }
