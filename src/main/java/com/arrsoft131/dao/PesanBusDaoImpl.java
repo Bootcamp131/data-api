@@ -54,4 +54,16 @@ public class PesanBusDaoImpl implements PesanBusDao {
 		session.flush(); 
 	}
 
+	public List<Pesanan> getDataPesananByIdPemesan(int pemesan) {
+		// TODO Auto-generated method stub
+		Session session = sessionFactory.getCurrentSession();
+		String hql = "from Pesanan pesan where pesan.idPemesan = :pemesan";
+		Query query = session.createQuery(hql).setParameter("pemesan", pemesan);
+		List<Pesanan> listPesanan = query.list();
+		if(listPesanan.isEmpty()){
+			return null;
+		}
+		return listPesanan;
+	}
+
 }

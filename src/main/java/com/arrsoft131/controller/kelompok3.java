@@ -55,4 +55,11 @@ public class kelompok3 {
 	public void updatePesanan(@RequestBody Pesanan pesanan, @PathVariable String code){
 		pesanBusService.updateByCode(code, pesanan);
 	}
+	
+	@RequestMapping("/get-pemesan")
+	@ResponseBody
+	public List<Pesanan> getDataPemesananByIdPemesan(@RequestParam(value = "pemesan", required = false) int pemesan){
+		List<Pesanan> listPemesan = pesanBusService.getDataPemesanByIdPemesan(pemesan);
+		return listPemesan;
+	}
 }

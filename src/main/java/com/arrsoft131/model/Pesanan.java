@@ -24,6 +24,16 @@ public class Pesanan {
 	private String tipePembayaran;
 	private String atasNamaPemabayaran;
 	private int jumlahSeatPesan;
+	private int hargaTotal;
+	
+	public void setHargaTotal(int hargaTotal) {
+		this.hargaTotal = hargaTotal;
+	}
+	
+	public int getHargaTotal() {
+		return hargaTotal;
+	}
+	
 	public int getId() {
 		return id;
 	}

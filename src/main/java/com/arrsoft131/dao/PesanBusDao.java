@@ -14,4 +14,6 @@ public interface PesanBusDao {
 
 	void update(Pesanan pesanan);
 
+	List<Pesanan> getDataPesananByIdPemesan(int pemesan);
+
 }

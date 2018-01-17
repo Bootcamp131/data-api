@@ -38,5 +38,10 @@ public class PesanBusService {
 		pesanBusDao.update(pesan);
 	}
 
+	public List<Pesanan> getDataPemesanByIdPemesan(int pemesan) {
+		// TODO Auto-generated method stub
+		return pesanBusDao.getDataPesananByIdPemesan(pemesan);
+	}
+
 	
 }
