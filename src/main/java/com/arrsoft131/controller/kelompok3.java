@@ -56,7 +56,7 @@ public class kelompok3 {
 		pesanBusService.updateByCode(code, pesanan);
 	}
 	
-	@RequestMapping("/get-pemesan")
+	@RequestMapping(value="/get-pemesan", method=RequestMethod.GET)
 	@ResponseBody
 	public List<Pesanan> getDataPemesananByIdPemesan(@RequestParam(value = "pemesan", required = false) int pemesan){
 		List<Pesanan> listPemesan = pesanBusService.getDataPemesanByIdPemesan(pemesan);
