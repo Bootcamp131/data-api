@@ -13,13 +13,13 @@
 	<tx:annotation-driven/>
 	<!-- Datasource dataSource = new DataSource() -->
 	
-	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+<!-- 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 	    <property name="driverClassName" value="org.postgresql.Driver" />
 	    <property name="url" value="jdbc:postgresql://localhost:5432/bootcamp131" />
 	    <property name="username" value="postgres"/>
 	    <property name="password" value="pensil"/>
-	</bean> -->
-	 
+	</bean>
+ -->	 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 	    <property name="driverClassName" value="org.postgresql.Driver" />
 	    <property name="url" value="jdbc:postgresql://ec2-54-221-251-195.compute-1.amazonaws.com:5432/d2tooeibpo71nj" />
@@ -33,14 +33,11 @@
 	 <property name="annotatedClasses">
 			<list>
 				<value>com.arrsoft131.model.Pesanan</value>
-				<!-- <value>com.arrsoft131.model.Role</value>
-				<value>com.arrsoft131.model.MyClass</value>
-				<value>com.arrsoft131.model.Pembahasan</value> -->
 			</list>
 		</property>
 		<property name="hibernateProperties">
 			<props>
-				<prop key="hibernate.hbm2ddl.auto">validate</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
 				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
 				<prop key="hibernate.show_sql">true</prop>
 				<prop key="hibernate.current_session_context_class">org.springframework.orm.hibernate5.SpringSessionContext

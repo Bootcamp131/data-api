@@ -48,5 +48,10 @@ public class PesanBusService {
 		return pesanBusDao.getDataPesananByKeberangkatanAndIdTrayek(kb, it);
 	}
 
+	public List<Pesanan> getAllPesan() {
+		// TODO Auto-generated method stub
+		return pesanBusDao.getAllPesanan();
+	}
+
 	
 }

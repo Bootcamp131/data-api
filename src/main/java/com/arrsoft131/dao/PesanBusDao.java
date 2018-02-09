@@ -18,4 +18,6 @@ public interface PesanBusDao {
 
 	List<Pesanan> getDataPesananByKeberangkatanAndIdTrayek(String kb, int it);
 
+	List<Pesanan> getAllPesanan();
+
 }

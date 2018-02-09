@@ -37,6 +37,13 @@ public class kelompok3 {
 		return listPesanan;
 	}
 	
+	@RequestMapping("/list-all")
+	@ResponseBody
+	public List<Pesanan> getPesanan(){
+		List<Pesanan> listPesanan = pesanBusService.getAllPesan();
+		return listPesanan;
+	}
+	
 	@RequestMapping("/get/{code}")
 	@ResponseBody
 	public Pesanan getPesananByCode(@PathVariable String code){

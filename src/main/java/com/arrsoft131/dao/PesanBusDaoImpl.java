@@ -15,6 +15,7 @@ public class PesanBusDaoImpl implements PesanBusDao {
 
 	@Autowired
 	SessionFactory sessionFactory;
+	
 	public Pesanan getPesanByCode(String code) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
@@ -75,6 +76,13 @@ public class PesanBusDaoImpl implements PesanBusDao {
 		if(listPesanan.isEmpty()){
 			return null;
 		}
+		return listPesanan;
+	}
+
+	public List<Pesanan> getAllPesanan() {
+		// TODO Auto-generated method stub
+		Session session = sessionFactory.getCurrentSession();
+		List<Pesanan> listPesanan= session.createCriteria(Pesanan.class).list();
 		return listPesanan;
 	}
 
